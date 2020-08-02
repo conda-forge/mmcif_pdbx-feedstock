@@ -1,18 +1,18 @@
 {% set name = "mmcif_pdbx" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a2f2abb8e62fe7b78acd9114be74f4ade2f29e971079b3e817f53b9b9b21eacc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e37268046e15b2a348aa2298cdba79ae2dae3f43e0a0b0ddd46066a681410811
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,13 +26,13 @@ test:
     - pdbx
 
 about:
-  home: "https://github.com/Electrostatics/mmcif_pdbx"
+  home: https://github.com/Electrostatics/mmcif_pdbx
   license: CC0
   license_family: PUBLIC-DOMAIN
   license_file: LICENSE
-  summary: "Python utilities for PDBx/mmCIF storage model"
-  doc_url: "http://mmcif.wwpdb.org/pdbx-mmcif-home-page.html"
-  dev_url: "https://github.com/Electrostatics/mmcif_pdbx"
+  summary: Python utilities for PDBx/mmCIF storage model
+  doc_url: http://mmcif.wwpdb.org/pdbx-mmcif-home-page.html
+  dev_url: https://github.com/Electrostatics/mmcif_pdbx
 
 extra:
   recipe-maintainers:
