@@ -5,11 +5,13 @@ Home: https://github.com/Electrostatics/mmcif_pdbx
 
 Package license: CC0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mmcif_pdbx-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python utilities for PDBx/mmCIF storage model
 
+Development: https://github.com/Electrostatics/mmcif_pdbx
 
+Documentation: http://mmcif.wwpdb.org/pdbx-mmcif-home-page.html
 
 Current build status
 ====================
