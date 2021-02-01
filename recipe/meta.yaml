@@ -1,5 +1,5 @@
 {% set name = "mmcif_pdbx" %}
-{% set version = "1.1.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e37268046e15b2a348aa2298cdba79ae2dae3f43e0a0b0ddd46066a681410811
+  sha256: ffd76b08f0215d052fcf3015b8bac927cdf369ca60e4e26974f8aec99ca66986
 
 build:
   noarch: python
