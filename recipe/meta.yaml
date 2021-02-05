@@ -26,7 +26,7 @@ test:
     - pdbx
   requires:
     - pytest
- 
+    - testfixtures
 
 about:
   home: https://github.com/Electrostatics/mmcif_pdbx
