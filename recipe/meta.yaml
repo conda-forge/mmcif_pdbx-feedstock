@@ -18,10 +18,9 @@ requirements:
   host:
     - pip
     - python
+    - versioneer
   run:
     - python
-    - setuptools 
-    - versioneer
 
 test:
   imports:
