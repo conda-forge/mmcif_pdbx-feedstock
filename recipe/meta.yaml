@@ -20,13 +20,13 @@ requirements:
     - python
   run:
     - python
+    - versioneer
 
 test:
   imports:
     - pdbx
   requires:
     - pytest
-    - testfixtures
 
 about:
   home: https://github.com/Electrostatics/mmcif_pdbx
