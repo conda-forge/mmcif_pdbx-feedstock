@@ -18,7 +18,6 @@ requirements:
   host:
     - pip
     - python
-    - versioneer
   run:
     - python
 
