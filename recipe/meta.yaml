@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
   sha256: a1f20cf35f92916160ae066f510cce9a0c21a630d064dafce545ba0cf47c9280
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
     - pdbx
   requires:
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Electrostatics/mmcif_pdbx
